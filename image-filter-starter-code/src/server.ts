@@ -8,7 +8,7 @@ import { IndexRouter } from './controller/index.router';
     const app = express();
 
     // Set the network port
-    const port = process.env.PORT || 8000;
+    const port : string = process.env.PORT || '8000';
 
     // Use the body parser middleware for post requests
     app.use(bodyParser.json());

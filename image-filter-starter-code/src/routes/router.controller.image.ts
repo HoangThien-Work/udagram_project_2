@@ -11,7 +11,7 @@ router.get('/filterimage', async(req:Request,res:Response)=>{
         return res.status(400).send('A image url need to provide or invalid image url');
     }
     
-    var imageFilterd = await filterImageFromURL(image_link);
+    var imageFilterd : string = await filterImageFromURL(image_link);
     if(!filterImageFromURL){
         return res.status(500).send('Api return with failure response!');
     }
