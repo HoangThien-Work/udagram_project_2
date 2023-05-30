@@ -13,11 +13,7 @@ import { IndexRouter } from './controller/index.router';
     // Use the body parser middleware for post requests
     app.use(bodyParser.json());
 
-    app.use('/api/v0', IndexRouter);
-
-    app.get('/', async (req, res) => {
-        res.send('/api/v0');
-    });
+    app.use('/api/', IndexRouter);
 
     // Start the Server
     app.listen(port, () => {
