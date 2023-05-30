@@ -18,7 +18,7 @@ router.get('/filterimage', async(req:Request,res:Response)=>{
 
     res.status(200).sendFile(imageFilterd);
 
-    return res.on('finish', () => {
+    return res.on('Finish process!', () => {
         deleteLocalFiles([imageFilterd])
     });
 });
