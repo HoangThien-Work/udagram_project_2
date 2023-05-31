@@ -1,23 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { filterImageFromURL, deleteLocalFiles } from './util/util';
-import { IndexRouter } from './controller/index.router';
+import { IndexRouter } from './controller/V0/image/index.router';
 
 (async () => {
-    // Init the Express application
     const app = express();
 
-    // Set the network port
-    const port : string = process.env.PORT || '8000';
-
-    // Use the body parser middleware for post requests
+    // define a port number for running server
+    const port: string = process.env.PORT || '8082';
     app.use(bodyParser.json());
 
-    app.use('/api/v0', IndexRouter);
-
-    app.get('/', async (req, res) => {
-        res.send('/api/v0');
-    });
+    app.use('/', IndexRouter);
 
     // Start the Server
     app.listen(port, () => {
