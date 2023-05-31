@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "23328441-cfb1-4324-b954-a71ea7f498a5",
+		"name": "Udagram-project2-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "filtered-image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{env}}/imagefilterd?link_image=https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3%26ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnN8ZW58MHx8MHx8fDA%3D%26w=1000%26q=80",
+					"host": [
+						"{{env}}"
+					],
+					"path": [
+						"imagefilterd"
+					],
+					"query": [
+						{
+							"key": "link_image",
+							"value": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3%26ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnN8ZW58MHx8MHx8fDA%3D%26w=1000%26q=80"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "env",
+			"value": "http://localhost:8082",
+			"type": "default"
+		}
+	]
+}
